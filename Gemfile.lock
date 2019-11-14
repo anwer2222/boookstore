@@ -185,6 +185,12 @@ GEM
       tilt (>= 1.1, < 3)
     sassc (2.2.1)
       ffi (~> 1.9)
+    sassc-rails (2.1.2)
+      railties (>= 4.0.0)
+      sassc (>= 2.0)
+      sprockets (> 3.0)
+      sprockets-rails
+      tilt
     searchkick (4.1.0)
       activemodel (>= 5)
       elasticsearch (>= 6)
@@ -252,6 +258,7 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 6.0.0)
   sass-rails (~> 5)
+  sassc-rails
   searchkick
   selenium-webdriver
   spring

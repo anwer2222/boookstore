@@ -2,6 +2,11 @@
 <html>
   <head>
     <title>Bookstore</title>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +15,16 @@
   </head>
 
   <body>
-    <%= yield %>
+
+  <%= render 'layouts/header' %>
+  <%= render 'layouts/flash' %>
+
+  <div id="main-container" class="container">
+  <%= yield %>
+  </div>
+
+  <%= render 'layouts/footer' %>
+
+
   </body>
 </html>

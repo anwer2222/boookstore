@@ -1,18 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @book.title %>
+  <h3>Title: <%= @book.title %></h3>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <h3>Description:</h3>
   <%= @book.description %>
 </p>
 
 <p>
-  <strong>Image url:</strong>
-  <%= @book.image_url %>
+  <strong>   </strong>
+  <%= image_tag @book.image_url , class: 'book-image' %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |

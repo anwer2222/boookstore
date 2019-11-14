@@ -9,8 +9,6 @@ Your demonstration application will use the frontend component of Bootstrap, Ela
 To start with some seeds on database, past the following in your db/seed.rb:
 
 ------------------------------------------------------------------------------------------------------------------------
-require 'pp'
-
 books = [
   {
     title: "Agile Web Development with Rails 4",
@@ -35,9 +33,13 @@ books = [
   }
 ]
 
+
 books.each do |book|
-  book = Book.find_or_create_by(book)
-  pp book
+	Book.create!(
+		title: book[:title],
+        description: book[:description],
+        image_url: book[:image_url]
+	)
 end
 
 ------------------------------------------------------------------------------------------------------------------------
