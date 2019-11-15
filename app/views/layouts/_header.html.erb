@@ -2,11 +2,12 @@
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <%= link_to "BookStore", root_path, class: 'navbar-brand' %>
-      <form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-      </form>
+      <div align="right">
+      <%= form_with(url: "/search", method: "post", class: 'form-inline my-2 my-lg-0', local: true) do %>
+        <%= text_field_tag(:q, nil, class: "form-control mr-sm-2", placeholder: "Search") %>
+        <%= button_tag("Search", class: "btn btn-outline-info my-2 my-sm-0", name: nil) %>
+      <% end %>
+      </div>
     </div>
 
   </nav>

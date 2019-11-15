@@ -44,12 +44,10 @@ gem 'sassc-rails'
 # Use elasticsearch library
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
+gem 'bonsai-elasticsearch-rails'
 
 gem 'sweetalert-rails'
 gem 'sweet-alert-confirm'
-
-
-
 
 
 group :development, :test do
